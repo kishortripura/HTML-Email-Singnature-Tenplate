@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content-wraper{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,.2);
+    overflow: hidden;
+    position: relative;
+}
+.content-wraper .image{
+    padding: 50px;
+    margin-right: 40px;
+    border-radius: 0 50px 50px 0;
+    background: rgb(223, 39, 230);
+    height: 300px;
+}
+.content-wraper .image img{
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px #000;
+}
+.content-wraper .content .name{
+    padding: 5px 0;
+    font-size: 33px;
+    color: #fff;
+}
+.content-wraper .content .post{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: rgb(8, 243, 231);
+}
+.content-wraper .content a{
+    display: block;
+    color: rgb(8, 243, 231);
+    font-size: 20px;
+}
+.content-wraper .content a:hover{
+    color: rgb(247, 255, 254);
+    font-size: 23px;
+}
+.content-wraper .icons{
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-flow: column;
+    background: rgb(223, 39, 230);
+    border-radius: 50px;
+    height: 320px;
+    width: 45px;
+}
+.content-wraper .icons a{
+    margin: 15px;
+    color: #fff;
+    font-size: 23px;
+}
+.content-wraper .icons a:hover{
+    color: rgb(8, 243, 231);
+    font-size: 30px;
+}
+@media (max-width:768px){
+    .content-wraper{
+        flex-flow: column;
+        width: 330px;
+        margin: 20px;
+        padding-bottom : 100px ;
+    }
+    .content-wraper .image{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 0 0 50px 50px;
+        text-align: center;
+    }
+    .content-wraper .icons{
+        left: 50%; top: 87%;
+        transform: translate(-50%, 0);
+        height: 45px;
+        width: 240px;
+        flex-flow: row;
+    }
+}
